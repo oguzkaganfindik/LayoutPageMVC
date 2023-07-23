@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LayoutPageMVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LayoutPageMVC.styles.css" asp-append-version="true" />
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="~/css/footer.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div style="margin: 20px;">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <!--a etiketinin içerisinde ya href ya da asp kodları eklenir--!>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img style="border-radius:10px; margin-left:10px;" src="~/img/Logo.png" height="50" />
+                </a>
+
+                <ul  class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">
+                            Dropdown Link
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link-1</a>
+                            <a class="dropdown-item" href="#">Link-2</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="heading text-center">
+                <div class="head1">
+                    Just Scratching the Surface
+                </div>
+                <p class="bdr"></p>
+            </div>
+            <div class="card-body">
+                <div class="row m-0 pt-5">
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="fas fa-hand-holding-usd fa-3x"></i>
+                            <div class="card-title">RECHARGE REPEAT CUSTOMER</div>
+                            <p><small>Save customers' cards for futures phone orders</small></p>
+                            <div class="learn-more">
+                                <p><small>LEARN MORE <label><i class="fas fa-angle-right"></i></label></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="fas fa-handshake fa-3x"></i>
+                            <div class="card-title">ACCEPT ELECTRONIC CHECK</div>
+                            <p><small>Save customers' cards for futures phone orders</small></p>
+                            <div class="learn-more">
+                                <p><small>LEARN MORE <label><i class="fas fa-angle-right"></i></label></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="fas fa-mobile-alt fa-3x"></i>
+                            <div class="card-title">STREAMLINE PHONE PAYMENTS</div>
+                            <p><small>Save customers' cards for futures phone orders</small></p>
+                            <div class="learn-more">
+                                <p><small>LEARN MORE <label><i class="fas fa-angle-right"></i></label></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="fas fa-user-secret fa-3x"></i>
+                            <div class="card-title">STAY SECURE</div>
+                            <p><small>Save customers' cards for futures phone orders</small></p>
+                            <div class="learn-more">
+                                <p><small>LEARN MORE <label><i class="fas fa-angle-right"></i></label></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card-footer row m-0">
+                <p> <label> <i class="fas fa-phone fa-rotate-90 text-primary"></i> </label> 800-601-0230</p>
+                <div>
+                    <p>
+                        <small class="follow-text">FOLLOW US ON SOCIAL MEDIA</small>
+                        <label class="footer-right">
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/oguzfindik">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter-square"></i>
+                            </a>
+                        </label>
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
